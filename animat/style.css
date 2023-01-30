@@ -1,0 +1,129 @@
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    background: #323232;
+    text-rendering: optimizeLegibility;
+    line-height: 1.5em;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    color: #323232;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  section {
+    position: relative;
+    padding: 60px 0;
+  }
+  .ani.ani-5 {
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .moving-square-frame {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    top: 10px;
+    left: 10px;
+    opacity: 0.1;
+    border: 4px solid #fff;
+  }
+  
+  .ani-moving-square {
+    background: url(./image.png);
+    background-size: 100% 100%;
+    height: 100px;
+    width: 100px;
+    -webkit-animation: ani-moving-square 6s cubic-bezier(0.7, 0, 0.7, 1) infinite;
+            animation: ani-moving-square 6s cubic-bezier(0.7, 0, 0.7, 1) infinite;
+  }
+
+  @-webkit-keyframes ani-moving-square {
+    0%, 2.5% {
+      transform: translate(0, 0);
+    }
+    10%, 15% {
+      transform: translate(20px, 0);
+    }
+    22.5%, 27.5% {
+      transform: translate(20px, 20px);
+    }
+    35%, 40% {
+      transform: translate(0, 20px);
+    }
+    47.5%, 52.5% {
+      transform: translate(0, 0);
+    }
+    60%, 65% {
+      transform: translate(0, 20px);
+    }
+    72.5%, 77.5% {
+      transform: translate(20px, 20px);
+    }
+    85%, 90% {
+      transform: translate(20px, 0);
+    }
+    97.5%, 100% {
+      transform: translate(0, 0);
+    }
+  }
+  @keyframes ani-moving-square {
+    0%, 2.5% {
+      transform: translate(0, 0);
+    }
+    10%, 15% {
+      transform: translate(20px, 0);
+    }
+    22.5%, 27.5% {
+      transform: translate(20px, 20px);
+    }
+    35%, 40% {
+      transform: translate(0, 20px);
+    }
+    47.5%, 52.5% {
+      transform: translate(0, 0);
+    }
+    60%, 65% {
+      transform: translate(0, 20px);
+    }
+    72.5%, 77.5% {
+      transform: translate(20px, 20px);
+    }
+    85%, 90% {
+      transform: translate(20px, 0);
+    }
+    97.5%, 100% {
+      transform: translate(0, 0);
+    }
+  }
+
+
+
+  h1{
+    font-size: 5rem;
+    color: transparent;
+    background: url(./back.png);
+    -webkit-text-stroke: 2px #fff;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+  }
+  @keyframes back {
+    100%{
+      background-position: 2000px 0;
+    }
+  }
